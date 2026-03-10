@@ -32,8 +32,8 @@ subprojects {
         testAnnotationProcessor(rootProject.libs.lombok)
 // =========== common
         // 除了 common 模块自己，其他所有模块都自动导入 common
-        if (project.path != ":common") {
-            implementation(project(":common"))
+        if (project.path != ":base") {
+            implementation(project(":base"))
         }
     }
 
