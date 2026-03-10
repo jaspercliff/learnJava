@@ -1,6 +1,7 @@
 [versions]
 # 版本号统一管理
 junit = "6.0.3"
+lombok = "1.18.42"
 caffeine = "3.2.3"
 
 [libraries]
@@ -9,7 +10,8 @@ junit-bom = { group = "org.junit", name = "junit-bom", version.ref = "junit" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit" }
 junit-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version.ref = "junit" }
 
-# 练习用的三方库
+# 三方库
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
 caffeine = { group = "com.github.ben-manes.caffeine", name = "caffeine", version.ref = "caffeine" }
 
 [bundles]
