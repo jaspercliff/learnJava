@@ -5,18 +5,25 @@ slf4j = "2.0.17"
 logback= "1.5.32"
 lombok = "1.18.42"
 caffeine = "3.2.3"
+guava = "33.5.0-jre"
 
 [libraries]
 # 单元测试相关
+#基础平台+jupiter(注解，断言等+执行引擎)
 junit-bom = { group = "org.junit", name = "junit-bom", version.ref = "junit" }
-junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit" }
-junit-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version.ref = "junit" }
+# bom指定了版本
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter"}
+junit-launcher = { group = "org.junit.platform", name = "junit-platform-launcher"}
+
 
 # 三方库
 # logback 已经引入slf4j-api  依赖传递  这里写 为了更换logback时不会报错 
 slf4j-api = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
 logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback" }
 lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
+
+# utils
+guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
 caffeine = { group = "com.github.ben-manes.caffeine", name = "caffeine", version.ref = "caffeine" }
 
 [bundles]

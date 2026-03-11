@@ -1,4 +1,4 @@
-package com.jasper.caffeineDemo;
+package com.jasper.population;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;

@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("java-library")
 }
 
 group = "com.jasper"
@@ -11,7 +11,7 @@ repositories {
 
 subprojects {
     // 1. 自动为子模块应用 Java 插件
-    apply(plugin = "java")
+    apply(plugin = "java-library")
 
     repositories {
         mavenCentral()
@@ -30,10 +30,10 @@ subprojects {
         // 引入注解处理器
         annotationProcessor(rootProject.libs.lombok)
         testAnnotationProcessor(rootProject.libs.lombok)
-// =========== common
-        // 除了 common 模块自己，其他所有模块都自动导入 common
+// =========== base
+        // 除了 base 模块自己，其他所有模块都自动导入base
         if (project.path != ":base") {
-            implementation(project(":base"))
+            api(project(":base"))
         }
     }
 
@@ -46,4 +46,3 @@ subprojects {
 tasks.test {
     useJUnitPlatform()
 }
-
