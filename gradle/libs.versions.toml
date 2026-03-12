@@ -6,6 +6,10 @@ logback= "1.5.32"
 lombok = "1.18.42"
 caffeine = "3.2.3"
 guava = "33.5.0-jre"
+jedis = "7.3.0"
+valkey-java = "5.5.0"
+osdetector = "1.7.3"
+valkey-glide = "2.2.7"
 
 [libraries]
 # 单元测试相关
@@ -26,7 +30,15 @@ lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" 
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
 caffeine = { group = "com.github.ben-manes.caffeine", name = "caffeine", version.ref = "caffeine" }
 
+# driver
+jedis = { group = "redis.clients", name = "jedis", version.ref = "jedis" }
+valkey-java= { group = "io.valkey", name = "valkey-java", version.ref = "valkey-java" }
+valkey-glide= { group = "io.valkey", name = "valkey-glide", version.ref = "valkey-glide" }
+
 [bundles]
 # 打包常用测试依赖，方便一键引用
 testing = ["junit-jupiter", "junit-launcher"]
 logging = ["slf4j-api", "logback-classic"]
+
+[plugins]
+osdetector = { id = "com.google.osdetector", version.ref = "osdetector" }
