@@ -18,7 +18,7 @@ public class SimpleTest {
 
     @BeforeEach
     public void init() {
-        jedis = new Jedis("127.0.0.1", 6379);
+        jedis = new Jedis("127.0.0.1", 6380);
         jedis.auth("passwd");
     }
 
