@@ -13,3 +13,6 @@ include("infra-redis:jedisDemo")
 include("infra-redis:valkeyJava")
 include("infra-redis:lettuceDemo")
 include("infra-redis:valkeyGlide")
+
+include("foundation")
+include("jvmDemo")
