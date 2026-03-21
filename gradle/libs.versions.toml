@@ -11,6 +11,7 @@ valkey-java = "5.5.0"
 lettuce = "7.0.0.RELEASE"
 osdetector = "1.7.3"
 valkey-glide = "2.2.7"
+mysq-connector-j = "9.6.0"
 
 [libraries]
 # 单元测试相关
@@ -36,6 +37,8 @@ jedis = { group = "redis.clients", name = "jedis", version.ref = "jedis" }
 valkey-java= { group = "io.valkey", name = "valkey-java", version.ref = "valkey-java" }
 lettuce = { group = "io.lettuce", name = "lettuce-core", version.ref = "lettuce" }
 valkey-glide= { group = "io.valkey", name = "valkey-glide", version.ref = "valkey-glide" }
+mysql-connector-j= { group = "com.mysql", name = "mysql-connector-j", version.ref = "mysq-connector-j" }
+
 
 [bundles]
 # 打包常用测试依赖，方便一键引用

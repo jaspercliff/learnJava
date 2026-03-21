@@ -16,3 +16,4 @@ include("infra-redis:valkeyGlide")
 
 include("foundation")
 include("jvmDemo")
+include("webDemo")
