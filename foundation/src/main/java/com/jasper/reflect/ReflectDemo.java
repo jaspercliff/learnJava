@@ -5,11 +5,18 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * 反射
+ * jdbc  annotation dynamic proxy
+ * @see com.jasper.jdbc.StatementExample
+ */
 public class ReflectDemo {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException,
             InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
         //Class.forName Person.class  person.getClass() 获取反射类
         Class<?> clazz = Class.forName("com.jasper.Person");
+        String name1 = clazz.getName();// com.jasper.Person
+        System.out.println("name1 = " + name1);
         Constructor<?> constructor = clazz.getConstructor();
         Object o = constructor.newInstance();
         Method setName = clazz.getMethod("setName", String.class);
