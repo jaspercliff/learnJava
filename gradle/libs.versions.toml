@@ -20,8 +20,6 @@ junit-bom = { group = "org.junit", name = "junit-bom", version.ref = "junit" }
 # bom指定了版本
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter"}
 junit-launcher = { group = "org.junit.platform", name = "junit-platform-launcher"}
-
-
 # 三方库
 # logback 已经引入slf4j-api  依赖传递  这里写 为了更换logback时不会报错 
 slf4j-api = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
