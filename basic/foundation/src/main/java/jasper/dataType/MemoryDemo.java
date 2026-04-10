@@ -1,4 +1,4 @@
-package com.jasper.dataType;
+package jasper.dataType;
 
 public class MemoryDemo {
     // 1. 静态变量：存储在方法区 (Method Area / Metaspace)

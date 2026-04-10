@@ -1,4 +1,4 @@
-package com.jasper.reflect;
+package jasper.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

@@ -1,4 +1,4 @@
-package com.jasper.dataType.enums;
+package jasper.dataType.enums;
 
 public class MainDemo {
     public static void main(String[] args) {

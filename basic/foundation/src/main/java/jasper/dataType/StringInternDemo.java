@@ -1,4 +1,4 @@
-package com.jasper.dataType;
+package jasper.dataType;
 
 import java.util.ArrayList;
 import java.util.List;
