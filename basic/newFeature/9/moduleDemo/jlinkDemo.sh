@@ -25,7 +25,7 @@ rm -rf output/myapp
 #jlink 会从 consumer 开始，把 producer 及其依赖的所有 JDK 模块
 #（如 java.base）全部找出来。没被依赖的（如 java.sql, java.desktop）全部丢弃
 jlink --module-path mods:$JAVA_HOME/jmods \
-  --add-modules consumer \
+  --add-modules consumer,jdk.jcmd \
   --launcher run=consumer/com.jasper.Main \
   --compress zip-9 \
   --no-header-files \
