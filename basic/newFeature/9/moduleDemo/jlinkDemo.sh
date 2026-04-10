@@ -1,12 +1,11 @@
 # 1. 进入项目目录
 cd /home/jasper/code/java/person/learnJava/basic/newFeature/9/moduleDemo
-
+# 2. 创建输出目录
+mkdir -p mods output
 
 # 3. 编译 producer 模块
 #-d mods/producer 指定编译后的 class 文件输出目录
-#source: 保留源文件名（报错能看到是哪个 .java）。 排错
-#lines: 保留行号（报错能看到第几行）
-javac -g:source,lines -d mods/producer \
+javac  -d mods/producer \
   producer/src/main/java/module-info.java \
   producer/src/main/java/com/jasper/api/OpenUtil.java \
   producer/src/main/java/com/jasper/internel/CloseUtil.java
@@ -15,22 +14,24 @@ javac -g:source,lines -d mods/producer \
 #--module-path mods
 #指定模块搜索路径
 #consumer 依赖 producer,需要在这里找到已编译的 producer 模块
-javac -g:source,lines --module-path mods -d mods/consumer \
+javac  --module-path mods -d mods/consumer \
   consumer/src/main/java/module-info.java \
   consumer/src/main/java/com/jasper/Main.java
+
+rm -rf output/myapp
 
 # 5. 使用 jlink 创建自定义运行时镜像
 #一个是你的业务模块（mods），一个是 JDK 自己的模块库（jmods）
 #jlink 会从 consumer 开始，把 producer 及其依赖的所有 JDK 模块
 #（如 java.base）全部找出来。没被依赖的（如 java.sql, java.desktop）全部丢弃
-jlink --module-path mods:\$JAVA_HOME/jmods \
+jlink --module-path mods:$JAVA_HOME/jmods \
   --add-modules consumer \
-  --output output/myapp \
-  --launcher run=consumer/com.jasper.Main\
-  --strip-native-commands\
+  --launcher run=consumer/com.jasper.Main \
   --compress zip-9 \
   --no-header-files \
-  --no-man-pages
+  --no-man-pages \
+  --strip-debug \
+  --output output/myapp
 
 # 分析编译好的 consumer 模块
 jdeps --module-path mods -m consumer
