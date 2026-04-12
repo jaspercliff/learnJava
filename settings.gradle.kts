@@ -14,7 +14,6 @@ include("infra-redis:valkeyJava")
 include("infra-redis:lettuceDemo")
 include("infra-redis:valkeyGlide")
 
-include("jvmDemo")
 include("webDemo")
 
 
