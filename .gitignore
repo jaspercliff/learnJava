@@ -46,3 +46,11 @@ bin/
 /.idea
 /basic/newFeature/9/moduleDemo/mods/
 /basic/newFeature/9/moduleDemo/output/
+
+.project
+.classpath
+.settings/
+bin/
+out/
+.gradle/
+build/
