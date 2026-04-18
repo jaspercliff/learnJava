@@ -1,4 +1,4 @@
-package com.jasper.lock;
+package com.jasper.lock.reentrantlock;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 @Slf4j
-public class ProducerConsumerExample {
+public class ConditionDemo {
     private static final ReentrantLock lock = new ReentrantLock();
     private static final Condition notFull = lock.newCondition();
     private static final Condition notEmpty = lock.newCondition();

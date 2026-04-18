@@ -2,15 +2,13 @@ package com.jasper.lock.reentrantlock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Reentrant {
+/** synchronized 可重入是jvm维护的monitor reentrantLock 是aqs 实现的 */
+public class ReentrantDemo {
     ReentrantLock lock = new ReentrantLock();
 
     public static void main(String[] args) {
-        Reentrant service = new Reentrant();
-        Runnable task =
-                service::a;
-        new Thread(task, "t1").start();
-        new Thread(task, "t2").start();
+        ReentrantDemo service = new ReentrantDemo();
+        service.a();
     }
 
     public void a() {
