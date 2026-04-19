@@ -11,7 +11,7 @@ public class Stack2 {
         stack.addFirst(3);
         while (!stack.isEmpty()) {
             Integer removeFirst = stack.removeFirst();
-            System.out.println(removeFirst);
+            System.out.println(removeFirst); // 3 2 1
         }
     }
 }
