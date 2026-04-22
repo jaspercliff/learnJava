@@ -1,4 +1,4 @@
-package jasper.reflect;
+package com.jasper.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -20,7 +20,7 @@ public class ReflectDemo {
         Constructor<?> constructor = clazz.getConstructor();
         Object o = constructor.newInstance();
         Method setName = clazz.getMethod("setName", String.class);
-        setName.invoke(o, "jasper");
+        setName.invoke(o, "com/jasper");
         Method getName = clazz.getMethod("getName");
         System.out.println(getName.invoke(o));
         System.out.println(o);

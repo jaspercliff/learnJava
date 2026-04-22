@@ -1,4 +1,4 @@
-package jasper.collections.queue.deque.ArrayDeque;
+package com.jasper.collections.queue.deque.ArrayDeque;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

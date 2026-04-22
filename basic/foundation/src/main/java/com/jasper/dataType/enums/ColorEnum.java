@@ -1,4 +1,4 @@
-package jasper.dataType.enums;
+package com.jasper.dataType.enums;
 
 public enum ColorEnum {
 

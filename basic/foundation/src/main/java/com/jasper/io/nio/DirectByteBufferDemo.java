@@ -1,4 +1,4 @@
-package jasper.io.nio;
+package com.jasper.io.nio;
 
 import java.nio.ByteBuffer;
 
