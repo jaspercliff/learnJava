@@ -13,7 +13,7 @@ public class ReplaceDemo {
         System.out.println("replace = " + replace);
         String email = "LeetCode@LeetCode.com";
         StringBuilder sb = new StringBuilder(email.toLowerCase());
-        // 索引替换
+        // 索引替换 sb
         sb.replace(1, 4, "abc"); // 1 - 3 替换为abc
         System.out.println(sb); // labccode@leetcode.com
         // 区间内全部改为 某个字符，自己循环
