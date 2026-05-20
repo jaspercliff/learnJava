@@ -12,6 +12,7 @@ lettuce = "7.0.0.RELEASE"
 osdetector = "1.7.3"
 valkey-glide = "2.2.7"
 mysq-connector-j = "9.6.0"
+jol = "0.17"
 
 [libraries]
 # 单元测试相关
@@ -29,6 +30,7 @@ lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" 
 # utils
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
 caffeine = { group = "com.github.ben-manes.caffeine", name = "caffeine", version.ref = "caffeine" }
+jol = {group = "org.openjdk.jol",name = "jol-core",version.ref = "jol"}
 
 # driver
 jedis = { group = "redis.clients", name = "jedis", version.ref = "jedis" }
